@@ -26,27 +26,76 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[12pt]{report}         %% LaTeX2e document.
-                                     %% keep 12pt to be within 2020 format specification
+                                     %% PR keep 12pt to be within 2020 format specification
 
 %% Preamble starts here and goes until \begin{document}.
-\usepackage{lipsum}
-
-\usepackage{nomencl}
-\makenomenclature
-
-\usepackage{glossaries}
-\makeglossaries
 
 %% Special packages, kept (optionally) in their own directory for
 %% general housekeeping purposes. Note that the path to the .sty
 %% file must be specified if it is kept in a separate directory.
 \usepackage{./packages/utthesis2}              
-\usepackage{natbib}
 \usepackage{./packages/gb4e}
 
 %% Built-in packages
-\usepackage{multicol} %% Multicolumnar support
-\usepackage{graphicx} %% Support for \includegraphics with scale options
+\usepackage{multicol}   %% Multicolumnar support
+\usepackage{graphicx}   %% Support for \includegraphics with scale options
+\usepackage{lipsum}     %% Random text generator, just for sample file
+\usepackage{nomencl}    %% Nomenclature package
+\usepackage{natbib}     %% Bibliography package
+\usepackage{glossaries} %% Glossary package
+\usepackage{mfirstuc}   %% Capitalize first letters (for chapter/section names)
+\usepackage{tocloft}    %% Improved TOC, LOT & LOF handler
+\usepackage[linktocpage=true]{hyperref}   %% Clickable hyperlinks pakage
+
+%%% tocloft configuration for TOC, LOT and LOF
+%% PR this is a new configuration for using tocloft to generate relevant pages
+
+\renewcommand{\contentsname}{Table of Contents\hfill}   
+%% TOC, LOT & LOF titles positioning
+\renewcommand{\cftbeforetoctitleskip}{0pt}
+\renewcommand{\cftaftertoctitleskip}{10pt}
+\renewcommand{\cftbeforelottitleskip}{0pt}
+\renewcommand{\cftafterlottitleskip}{10pt}
+\renewcommand{\cftbeforeloftitleskip}{0pt}
+\renewcommand{\cftafterloftitleskip}{10pt}
+%% TOC, LOT & LOF titles positioning
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\large}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\large}
+\renewcommand{\cftafterlottitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\bfseries\large}
+\renewcommand{\cftafterloftitle}{\hfill}
+
+%% TOC vertical spacing
+\renewcommand\cftbeforepartskip{10pt}
+\renewcommand\cftbeforechapskip{5pt}
+\renewcommand\cftbeforesecskip{2pt}
+\renewcommand\cftbeforesubsecskip{2pt}
+
+%TOC font sizes
+\renewcommand\cftpartfont{\large\bfseries}
+\renewcommand\cftchapfont{\normalsize}
+\renewcommand\cftsecfont{\normalsize}
+\renewcommand\cftchappagefont{\normalsize}
+\renewcommand\cftsecpagefont{\normalsize}
+%% Other font sizes
+\renewcommand{\cftfigfont}{\normalsize}     % figure entries in LOT
+\renewcommand{\cftfigpagefont}{\normalsize} % figure caption pages
+%% TOC dots
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % dots for parts
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % dots for chapters
+
+%% PR setting hyperlink colors black
+%% Hyperlink colors
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
 
 \newif\ifmasters		     %% Do not change
 \newif\ifphd			     %% these lines.
@@ -168,34 +217,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\makeatletter
-\def\@makechapterhead#1{%
-   {\parindent \z@ \centering \normalfont
-     \ifnum \c@secnumdepth >\m@ne
-         \large\bfseries \@chapapp\space \thechapter
-         \par\nobreak
-         \vskip 0\p@
-     \fi
-     \interlinepenalty\@M
-     \large \bfseries #1\par\nobreak
-     \vskip 20\p@
-   }}
-
-\def\@makeschapterhead#1{%
-   {\parindent \z@ \centering
-     \normalfont
-     \interlinepenalty\@M
-     \large \bfseries  #1\par\nobreak
-     \vskip 10\p@
-   }}
-   
-\renewcommand\section{\@startsection{section}{1}{\z@}%
-                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-                                   {1.3ex \@plus.2ex}%
-                                   {\normalfont\normalsize\bfseries}}
-\makeatother
-%\sectionfont{\fontsize{12}{15}\selectfont}
-
+\makenomenclature
+\makeglossaries
 \input{glossary}
 
 
@@ -226,21 +249,41 @@
 \end{thesisabstract}                 
 
 \tableofcontents                     %% Generate table of contents.
-
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\texorpdfstring{\capitalisewords{List of tables}}{}}
 \listoftables         %% Uncomment this to generate list of tables.
 
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\texorpdfstring{\capitalisewords{List of figures}}{}}
 \listoffigures       %% Uncomment this to generate list of figures.                                    
 
 
 \input{nomenclature}			     %% Input as separate file (recommended)
 \printnomenclature
-\addcontentsline{toc}{chapter}{Nomenclature}
+\addcontentsline{toc}{chapter}{\texorpdfstring{\capitalisewords{Nomenclature}}{}}
 
-\chapter{Introduction}		     %% Create a chapter.
+%% PR New functionality of major sections (hierarchy above chapters)
+\part*{\MakeUppercase{First major section of this document}} 
+\addcontentsline{toc}{part}{\texorpdfstring{\MakeUppercase{First major section of this document}}{}}
+
+%\nonewpagechapter{\capitalisewords{Introduction}} %% Create a chapter.
+\nonewpagechapter{Introduction}
+                             %% PR if comes after new major section uses a no-new-page 
 \label{chap:intro}		     %% Label, if desired, for referencing.
 \input{intro}			     %% Input as separate file (recommended)
 
-\chapter{Background}
+%% PR following is to provide more examples
+
+\chapter{\capitalisewords{Literature review}}
+\label{chap:lit_rev}
+\lipsum[1-3]
+
+\part*{Second part of this document}
+\addcontentsline{toc}{part}{\texorpdfstring{\MakeUppercase{Second Part of this document}}{}}
+
+\lipsum[1]
+
+\nonewpagechapter{\capitalisewords{Background}}
 \label{chap:background}
 \input{background}
 
@@ -266,7 +309,9 @@
 \label{chap:appendix}
 \input{appendix}
  
-%%This page is optional—must be placed in this order if it is included in the dissertation. If you don’t want to include a glossary, then delete the entire page and the following page break.
+%% PR from formatting guide:
+%%This page is optional—must be placed in this order if it is included in the dissertation.
+%If you don’t want to include a glossary, then delete the entire page and the following page break.
 \printglossaries
 \addcontentsline {toc}{chapter}{Glossary} 
 

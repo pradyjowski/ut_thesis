@@ -32,6 +32,12 @@
 %%% display co-supervisor information.
 %%% My comments contain the string ``NLG''
 %%%
+%%% Modified by Patryk Radyjowski in August 2020 to reflect 
+%%% updated UT formatting guidelines published in 2018.
+%%% Furthermore the template is proven to work in Overleaf web-based 
+%%% Latex editor
+%%% My comments contain the string ``PR''
+%%%
 %%% This file is free and can be modified or distributed as long as
 %%% you meet the following conditions:
 %%%
@@ -82,11 +88,11 @@
 %%%
 %%% \thesisauthor    %% Name of the author; defaults to "Ima Student".
 %%% \thesismonth     %% Month of graduation; defaults to "May".
-%%% \thesisyear      %% Year of graduation; defaults to "1994".
+%%% \thesisyear      %% Year of graduation; defaults to "2020".
 %%% \thesistitle     %% Full title of dissertation; defaults to "Title".
 %%% \thesistitletypesize
 %%%                  %% Typesize used to typeset \thesistitle; defaults
-%%%                  %% to \Large.
+%%%                  %% to \large.
 %%% \thesisauthorpreviousdegrees
 %%%                  %% Previous degrees of author; defaults to "Degree"
 %%% \thesissupervisor%% Name of thesis supervisor; defaults to "Supervisor"
@@ -96,19 +102,19 @@
 %%%                  %% "Approved by".
 %%% \thesisapprovedbytypesize
 %%%                  %% Typesize used to typeset \thesisapprovedby; defaults
-%%%                  %% to \large.
+%%%                  %% to \normalsize.
 %%% \thesiscopyrightholder
 %%%                  %% Name of copyright holder; defaults to \thesisauthor.
 %%% \thesistypist    %% Name of thesis typist; defaults to "the author".
 %%% \thesistype      %% Type of thesis; defaults to "Dissertation".
 %%% \thesistypetypesize
 %%%                  %% Typesize used to typeset \thesistype; defaults to
-%%%                  %% \large.
+%%%                  %% \normalsize.
 %%% \thesisdegree    %% Degree for which thesis is submitted; defaults to
 %%%                  %% "Doctor of Philosophy".
 %%% \thesisdegreetypesize
 %%%                  %% Typesize used to typeset \thesisdegree; defaults to
-%%%                  %% \large.
+%%%                  %% \normalsize.
 %%% \thesisdegreeabbreviation
 %%%                  %% Abbreviation of \thesisdegree; defaults to "Ph.D.".
 %%% \thesiscommitteesize
@@ -117,7 +123,7 @@
 %%%                  %% "Dissertation Committee:".
 %%% \thesiscommitteetypesize
 %%%                  %% Typesize used to typeset \thesiscommittee; defaults
-%%%                  %% to \large.
+%%%                  %% to \normalsize.
 %%% \thesisvitahead  %% Title of the vita page; defaults to "Vita".
 %%% \thesisvitaheadtypesize
 %%%                  %% Typesize used to typeset \thesisvitahead; unused.
@@ -126,13 +132,13 @@
 %%%                  %% "Acknowledgments".
 %%% \thesisacknowledgmentheadtypesize
 %%%                  %% Typesize used to typeset \thesisacknowledgmenthead;
-%%%                  %% unused.
+%%%                  %% defaults to \normalsize (2020 format)
 %%% \thesisacknowledgmentsigname
 %%%                  %% Signature on the acknowledgments page; defaults to
 %%%                  %% \thesisauthor.
 %%% \thesisacknowledgmentsignametypesize
 %%%                  %% Typesize used to typeset \thesisacknowledgmentsigname;
-%%%                  %% defaults to \large.
+%%%                  %% defaults to \normalsize.
 %%% \thesisacknowledgmentsigplace
 %%%                  %% Address used on the acknowledgments page; defaults
 %%%                  %% to "The University of Texas at Austin \\ \thesismonth
@@ -141,7 +147,7 @@
 %%%                  %% "\thesisauthor, \thesisauthorpreviousdegrees".
 %%% \thesisstudenttypesize
 %%%                  %% Typesize used to typeset \thesisstudent; defaults
-%%%                  %% to \large.
+%%%                  %% to \normalsize.
 %%% \thesisdedication%% Person or thing dedicated to; defaults to
 %%%                  %% "To myself". :-)
 %%%
@@ -209,11 +215,12 @@
 %%%
 %%% Set up page layout parameters.
 %%%
-\setlength{\textheight}{7.75in} %{8in}- 1/4"        BKay
-\setlength{\oddsidemargin}{0.62in}  %{0.5in} + 1/8" BKay
-\setlength{\evensidemargin}{0.62in} %{0.5in}        BKay
-\setlength{\textwidth}{5.50in}
-\setlength{\topmargin}{0.62in} %{0.5in}+1/8"        BKay
+%%% PR Updated based on new template
+\setlength{\textheight}{8.5in} 
+\setlength{\oddsidemargin}{0.25in} 
+\setlength{\evensidemargin}{0.25in} 
+\setlength{\textwidth}{6in}
+\setlength{\topmargin}{0.25in}
 \setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
 \setlength{\parindent}{12mm}
@@ -227,7 +234,7 @@
 \newcommand{\thesismonth}{May}
 \newcommand{\thesisyear}{1994}
 \newcommand{\thesistitle}{Title}
-\newcommand{\thesistitletypesize}{\Large}
+\newcommand{\thesistitletypesize}{\large}
 \newcommand{\thesisauthorpreviousdegrees}{Degree}
 \newcommand{\thesissupervisor}{Supervisor}
 \newcommand{\thesiscosupervisor}{}
@@ -242,24 +249,24 @@
 \newcommand{\thesiscommitteememberi}{}
 \newcommand{\thesisauthoraddress}{USA}
 \newcommand{\thesisapprovedby}{Approved by}
-\newcommand{\thesisapprovedbytypesize}{\large}
+\newcommand{\thesisapprovedbytypesize}{\normalsize}
 \newcommand{\thesiscopyrightholder}{\thesisauthor}
 \newcommand{\thesistypist}{the author}
 \newcommand{\thesistype}{Dissertation}
-\newcommand{\thesistypetypesize}{\large}
-\newcommand{\thesistypesize}{\large}
+\newcommand{\thesistypetypesize}{\normalsize}
+\newcommand{\thesistypesize}{\normalsize}
 \newcommand{\thesisdegree}{Doctor of Philosophy}
-\newcommand{\thesisdegreetypesize}{\large}
+\newcommand{\thesisdegreetypesize}{\normalsize}
 \newcommand{\thesisdegreeabbreviation}{Ph.D.}
 \newcommand{\thesiscommitteesize}{5}
 \newcommand{\thesiscommittee}{Dissertation Committee:}
-\newcommand{\thesiscommitteetypesize}{\large}
+\newcommand{\thesiscommitteetypesize}{\normalsize}
 \newcommand{\thesisvitahead}{Vita}
-\newcommand{\thesisvitaheadtypesize}{\Large}
+\newcommand{\thesisvitaheadtypesize}{\normalsize}
 \newcommand{\thesisacknowledgmenthead}{Acknowledgments}
-\newcommand{\thesisacknowledgmentheadtypesize}{\Large}
+\newcommand{\thesisacknowledgmentheadtypesize}{\large}
 \newcommand{\thesisacknowledgmentsigname}{\thesisauthor}
-\newcommand{\thesisacknowledgmentsignametypesize}{\large}
+\newcommand{\thesisacknowledgmentsignametypesize}{\normalsize}
 \newcommand{\thesisacknowledgmentsigplace}%
     {{\slshape
        \renewcommand{\arraystretch}{1.0}
@@ -268,7 +275,7 @@
          \thesismonth\ \thesisyear
        \end{tabular}}}
 \newcommand{\thesisstudent}{\thesisauthor, \thesisauthorpreviousdegrees}
-\newcommand{\thesisstudenttypesize}{\large}
+\newcommand{\thesisstudenttypesize}{\normalsize}
 \newcommand{\thesisdedication}{To myself}
 
 %%%
@@ -307,7 +314,7 @@
     {\textbf{\thesiscommitteetypesize \thesiscommittee}}
 \newcommand{\@thesisvitahead}{\thesisvitahead}
 \newcommand{\@thesisacknowledgmenthead}%
-    {\thesisacknowledgmenthead}
+    {\textsc{\thesisacknowledgmentheadtypesize \thesisacknowledgmenthead}}
 \newcommand{\@thesisacknowledgmentsigname}%
     {\textsc{\thesisacknowledgmentsignametypesize \thesisacknowledgmentsigname}}
 \newcommand{\@thesisacknowledgmentsigplace}{\thesisacknowledgmentsigplace}
@@ -345,7 +352,7 @@
     \end{center}
     \vfill \strut
     \newpage}
-
+    
 %%%
 %%% Command to generate title page.
 %%%
@@ -356,73 +363,133 @@
       % Commented-out by JAB 08Mar99 -- didn't leave any room for two-line title
       %\strut \vfill    % Added BKay 17Oct96 -- title was too high on the page
       \@thesistitle \\[8mm]
-      by \\[4mm]
+      {\bf by \/} \\[4mm]
       \@thesisstudent \\
       \vspace{26mm}
-      \textbf{\thesistypetypesize \thesistype} \\
-      Presented to the Faculty of the Graduate School of \\
+      
+      {\large \textbf{\thesistype} } \\
+      {\normalsize Presented to the Faculty of the Graduate School of \\
       \@universityname \\
       in Partial Fulfillment \\
       of the Requirements \\
-      for the Degree of \\[4mm]
-      \textbf{\thesisdegreetypesize \thesisdegree} \\
-      \vspace{26mm}
-      \textbf{\Large \@universityname} \\[4mm]
-      \thesismonth \ \thesisyear
+      for the Degree of } \\[4mm] 
+      {\large \textbf{\thesisdegree} }\\
+      \vspace{28mm}
+      \textbf{\large \@universityname \\[2mm]
+      \thesismonth \ \thesisyear }
     \end{center}
     \end{spacing}
     \newpage}
-
+    
 %%%
 %%% Generates a signature line with the given name
 %%% Adapted from 26 Aug 2001 cwm by JAB
 %%%
-\newcommand{\thesissigline}[1]{%
-  \leftline{\hbox to 2.5in{}\hrulefill}
-  \endgraf
-  \vspace*{-18pt}
-  \leftline{\hbox to 2.53in{}{#1}}}
-
+%\newcommand{\thesissigline}[1]{%
+%  \leftline{\hbox to 2.5in{}\hrulefill}
+%  \endgraf
+%  \vspace*{-18pt}
+%  \leftline{\hbox to 2.53in{}{#1}}}
 
 %%%
 %%% Generates signature lines for the committee
 %%% Adapted from 26 Aug 2001 cwm by JAB
 %%% Accepts up to two supervisors and eight other members
 %%%
-\newcommand{\thesiscertificationsignaturelines}{
+%%% PR depreciated as of 2020
+%%%
+%\newcommand{\thesiscertificationsignaturelines}{
+%  \ifx\thesissupervisor\@emptycommand\relax\else
+%    \thesissigline{\thesissupervisor, Supervisor}
+%  \fi
+%  \ifx\thesiscosupervisor\@emptycommand\relax\else
+%    \thesissigline{\thesiscosupervisor, Co-Supervisor}	%% NLG: changed to
+%  \fi							%% Co-Supervisor   
+%  \ifx\thesiscommitteemembera\@emptycommand\relax\else
+%    \thesissigline{\thesiscommitteemembera}
+%  \fi
+%  \ifphd						%% NLG: conditional
+%    \ifx\thesiscommitteememberb\@emptycommand\relax\else%% handles masters &
+%      \thesissigline{\thesiscommitteememberb}		%% PhD with same command
+%    \fi
+%    \ifx\thesiscommitteememberc\@emptycommand\relax\else
+%      \thesissigline{\thesiscommitteememberc}
+%    \fi
+%    \ifx\thesiscommitteememberd\@emptycommand\relax\else
+%      \thesissigline{\thesiscommitteememberd}
+%    \fi
+%    \ifx\thesiscommitteemembere\@emptycommand\relax\else
+%      \thesissigline{\thesiscommitteemembere}
+%    \fi
+%    \ifx\thesiscommitteememberf\@emptycommand\relax\else
+%      \thesissigline{\thesiscommitteememberf}
+%    \fi
+%    \ifx\thesiscommitteememberg\@emptycommand\relax\else
+%      \thesissigline{\thesiscommitteememberg}
+%    \fi
+%    \ifx\thesiscommitteememberh\@emptycommand\relax\else
+%      \thesissigline{\thesiscommitteememberh}
+%    \fi
+%    \ifx\thesiscommitteememberi\@emptycommand\relax\else
+%      \thesissigline{\thesiscommitteememberi}
+%    \fi
+%  \fi
+%}
+
+%%%
+%%% Generates a signature line with the given name 
+%%% without the signature line
+%%% Adapted from 26 Aug 2001 cwm by JAB
+%%%
+%%% PR new version of committee list with no signature lines
+%%% PR adapted from previous version preserver above
+%%%
+\newcommand{\thesissignoline}[1]{%
+  \leftline{\hbox to 2.5in{}}
+  \endgraf
+  \vspace*{-10pt}
+  \leftline{\hbox to 2.53in{}{\normalsize #1}}}  
+
+%%%
+%%% Generates the committee list without signature lines
+%%% PR Adapted from the signature lines version
+%%% Accepts up to two supervisors and eight other members
+%%%
+%%%
+\newcommand{\thesiscertificationsignaturenolines}{
   \ifx\thesissupervisor\@emptycommand\relax\else
-    \thesissigline{\thesissupervisor, Supervisor}
+    \thesissignoline{\thesissupervisor, Supervisor}
   \fi
   \ifx\thesiscosupervisor\@emptycommand\relax\else
-    \thesissigline{\thesiscosupervisor, Co-Supervisor}	%% NLG: changed to
+    \thesissignoline{\thesiscosupervisor, Co-Supervisor}	%% NLG: changed to
   \fi							%% Co-Supervisor   
   \ifx\thesiscommitteemembera\@emptycommand\relax\else
-    \thesissigline{\thesiscommitteemembera}
+    \thesissignoline{\thesiscommitteemembera}
   \fi
   \ifphd						%% NLG: conditional
     \ifx\thesiscommitteememberb\@emptycommand\relax\else%% handles masters &
-      \thesissigline{\thesiscommitteememberb}		%% PhD with same command
+      \thesissignoline{\thesiscommitteememberb}		%% PhD with same command
     \fi
     \ifx\thesiscommitteememberc\@emptycommand\relax\else
-      \thesissigline{\thesiscommitteememberc}
+      \thesissignoline{\thesiscommitteememberc}
     \fi
     \ifx\thesiscommitteememberd\@emptycommand\relax\else
-      \thesissigline{\thesiscommitteememberd}
+      \thesissignoline{\thesiscommitteememberd}
     \fi
     \ifx\thesiscommitteemembere\@emptycommand\relax\else
-      \thesissigline{\thesiscommitteemembere}
+      \thesissignoline{\thesiscommitteemembere}
     \fi
     \ifx\thesiscommitteememberf\@emptycommand\relax\else
-      \thesissigline{\thesiscommitteememberf}
+      \thesissignoline{\thesiscommitteememberf}
     \fi
     \ifx\thesiscommitteememberg\@emptycommand\relax\else
-      \thesissigline{\thesiscommitteememberg}
+      \thesissignoline{\thesiscommitteememberg}
     \fi
     \ifx\thesiscommitteememberh\@emptycommand\relax\else
-      \thesissigline{\thesiscommitteememberh}
+      \thesissignoline{\thesiscommitteememberh}
     \fi
     \ifx\thesiscommitteememberi\@emptycommand\relax\else
-      \thesissigline{\thesiscommitteememberi}
+      \thesissignoline{\thesiscommitteememberi}
     \fi
   \fi
 }
@@ -439,21 +506,27 @@
 \newcommand{\thesiscertificationpage}{
     \thispagestyle{empty}
     \ifmasters
+      {\bf
       \centerline{The \thesistype ~Committee for \thesisauthor}
       \centerline{certifies that this is the approved version of the following
-	\MakeLowercase{\thesistype}:}
+	  \MakeLowercase{\thesistype}:}
+	  }
     \fi
     \ifphd
+      {\bf
       \centerline{The \thesistype ~Committee for \thesisauthor}
       \centerline{certifies that this is the approved version of the 
 	following \MakeLowercase{\thesistype}:}
+	  }
     \fi
     \vspace*{75pt}
     \setlength\@tmplength\baselineskip
     \baselineskip=16.5pt plus .5pt minus .2 pt
     \baselineskip=28.5pt plus .5pt minus .2 pt
     \begin{center}
-    \large\bf\@thesistitle
+      \begin{doublespace}
+        \large\bf\@thesistitle
+      \end{doublespace}
     \end{center}
     \vspace*{55pt}
     \ifmasters
@@ -462,11 +535,12 @@
 	COMMITTEE}:\hfill}
     \fi
     \ifphd
-      \leftline{\hbox to 2.5in{}{\bf Committee:}\hfill}
+      \leftline{\hbox to 2.5in{}{\bf \normalsize Committee:}\hfill}
     \fi
     %\bigskip\medskip\smallskip
     \bigskip
-    \thesiscertificationsignaturelines
+    %%\thesiscertificationsignaturelines %% with signature lines (pre-2018)
+    \thesiscertificationsignaturenolines  %% no signature lines (new)
     \setlength\baselineskip\@tmplength
     \clearpage}
 
@@ -477,21 +551,20 @@
 %%% \ifcosuper, see line 79 of utthesis.tex
 \newenvironment{thesisabstract}
     {\chapter*{}
-     \vspace*{0mm}
      \begin{center}
-       {\bf Abstract} \vspace{20pt}
+       {\bf \large Abstract} \vspace{20pt}
        \setlength{\unitlength}{1mm}
        \begin{spacing}{2}
-       \@thesistitle \\[10mm]
+       {\large \@thesistitle} \\[10mm]
        \end{spacing}
        \begin{spacing}{\@defaultbaselinestretch}
-       \thesisauthor, \thesisdegreeabbreviation \\
-       \@universityname, \thesisyear \\[10mm]
+       {\normalsize \thesisauthor, \thesisdegreeabbreviation \\
+       \@universityname, \thesisyear} \\[10mm]
        \end{spacing}
        \ifcosuper 
-	 Supervisors: \thesissupervisor ~and \thesiscosupervisor \\
+	 {\normalsize Supervisors: \thesissupervisor ~and \thesiscosupervisor }\\
        \else
-	 Supervisor: \thesissupervisor \\
+	 {\normalsize Supervisor: \thesissupervisor }\\
        \fi
      \end{center}
      \vspace{5mm}
@@ -520,7 +593,8 @@
      \chapter*{\@thesisacknowledgmenthead
          \@mkboth{\uppercase{\@thesisacknowledgmenthead}}
                  {\uppercase{\@thesisacknowledgmenthead}}}
-     \begin{spacing}{\@defaultbaselinestretch}}
+
+     \begin{spacing}{\@defaultbaselinestretch} \vspace{8mm} }
     {\end{spacing} \par \vspace{20mm}
      \raggedleft \@thesisacknowledgmentsigname \\[10mm]
      \raggedright \@thesisacknowledgmentsigplace \newpage}
@@ -548,8 +622,13 @@
        formatting this \lowercase\expandafter{\thesistype} were written
        by Dinesh Das, Department of Computer Sciences, The University
        %% AME: added other acks
-       of Texas at Austin, and extended by Bert Kay, James A. Bednar, Ayman El-Khashab, and Nicholas Gaylord.
+       of Texas at Austin, and extended by Bert Kay, James A. Bednar, Ayman El-Khashab, Nicholas Gaylord, and Patryk Radyjowski.
 	  } by \thesistypist.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PR Decided to put full definitions of Part, Chapter and Section from report.cls, (c) LaTeX3 Project.
+%%% PR This way it's easier to modify to match UT formatting
 
 \newcommand{\@chapteralignment}{\centering}
 \renewcommand{\chapter}{\clearpage
@@ -583,6 +662,71 @@
 %%%
 %%% Command from report.cls, (c) LaTeX3 Project.
 %%%
+
+%\patchcmd{\l@part}{#1}{\MakeUppercase{#1}}{}{}
+
+
+%% PART - "Major Sections"
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  %\thispagestyle{plain}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  %\null\vfil
+  \secdef\@part\@spart}
+  
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}\normalsize\MakeUppercase{#1}}%
+    \else
+      \addcontentsline{toc}{part}{\normalsize\MakeUppercase{#1}}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \large\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \large \bfseries \MakeUppercase{#2}\par}%
+    \@endpart}
+    
+\def\@spart#1{%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \large \bfseries \MakeUppercase{#1}\par}%
+    \@endpart}
+    
+\def\@endpart{
+               \vspace{20pt}
+%% PR remaining formatting is unwanted
+%              \vfil\newpage
+%              \if@twoside
+%               \if@openright
+%                \null
+%                \thispagestyle{empty}%
+%                \newpage
+%               \fi
+%              \fi
+%              \if@tempswa
+%                \twocolumn
+%              \fi
+}
+
+
+%% CHAPTERS - "Chapters"
 \def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
                       \refstepcounter{chapter}%
                       \typeout{\@chapapp\space\thechapter.}%
@@ -606,31 +750,63 @@
                       \@makechapterhead{#2}%
                       \@afterheading
                     \fi
-                    }
-
-%%%
-%%% Command from report.cls, (c) LaTeX3 Project.
-%%%
+                    }                    
+                    
 \def\@makechapterhead#1{%
-  \vspace*{50\p@}%
+  %\vspace*{50\p@}% removed, new 2020 format
   {\parindent \z@ \@chapteralignment \reset@font
     \ifnum \c@secnumdepth >\m@ne
-      \huge\bfseries \@chapapp{} \thechapter
-      \par
-      \vskip 20\p@
+      \large\bfseries \@chapapp{} \thechapter :
+      %\par
+      \nobreak
+      %\vskip 0\p@
     \fi
-    \Huge \bfseries #1\par
-    \nobreak
-    \vskip 40\p@
+    %\interlinepenalty\@M
+    \large \bfseries #1\par\nobreak
+    \vskip 20\p@
+    
   }}
+  
 \def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
+  %\vspace*{50\p@}% removed, new 2020 format
   {\parindent \z@ \@chapteralignment
     \reset@font
-    \Huge \bfseries  #1\par
-    \nobreak
-    \vskip 40\p@
+    %\interlinepenalty\@M
+    \large \bfseries  #1\par\nobreak
+    \vskip 20\p@
   }}
+  
+  
+% Special nonewpagechapter to be used right after a new major section
+\newcommand\nonewpagechapter{
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \vspace{20pt}
+                    \secdef\@chapter\@schapter}
+                    
+  
+%%SECTIONS - "Sub-chapters"
+\renewcommand\section{\@startsection {section}{1}{\z@}      % {name}{level}{indent}
+                                   {-3.5ex \@plus -1ex \@minus -.2ex} % beforeskip
+                                   {1.3ex \@plus.2ex}                 % afterskip
+                                   {\normalfont\normalsize\bfseries}} %style
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+                                       {3.25ex \@plus1ex \@minus .2ex}%
+                                       {-1em}%
+                                      {\normalfont\normalsize\bfseries}}
 
 %%%
 %%% Command from report.cls, (c) LaTeX3 Project.
